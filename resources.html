@@ -41,6 +41,7 @@
       <a class="font-display text-xs font-bold uppercase tracking-[0.18em] text-ink/70 transition-colors duration-200 hover:text-brand-600" href="/about">About</a>
       <a class="font-display text-xs font-bold uppercase tracking-[0.18em] text-ink/70 transition-colors duration-200 hover:text-brand-600" href="/services">Services</a>
       <a class="font-display text-xs font-bold uppercase tracking-[0.18em] text-ink/70 transition-colors duration-200 hover:text-brand-600" href="/testimonials">Testimonials</a>
+      <a aria-current="page" class="font-display text-xs font-bold uppercase tracking-[0.18em] text-ink/70 transition-colors duration-200 hover:text-brand-600" href="/resources">Resources</a>
       <a class="font-display text-xs font-bold uppercase tracking-[0.18em] text-ink/70 transition-colors duration-200 hover:text-brand-600" href="/contact">Contact</a>
     </nav>
 
@@ -71,6 +72,7 @@
     </nav>
     <div class="border-t border-ink/10 px-6 py-8">
       <a class="block w-full rounded-md bg-brand-500 px-6 py-4 text-center font-display text-sm font-bold uppercase tracking-[0.18em] text-white transition-colors duration-200 hover:bg-brand-600" href="/contact">Schedule a free walkthrough</a>
+      <a aria-current="page" class="block w-full rounded-md bg-brand-500 px-6 py-4 text-center font-display text-sm font-bold uppercase tracking-[0.18em] text-white transition-colors duration-200 hover:bg-brand-600" href="/resources">Resources</a>
       <a class="mt-4 block text-center font-display text-lg font-bold text-brand-600" data-tibly-field="phone" href="tel:7277737093">(727) 773-7093</a>
     </div>
   </div>
@@ -91,21 +93,26 @@
 .tibly-article a{text-decoration:underline}
 .tibly-article blockquote{border-left:3px solid color-mix(in srgb,currentColor 25%,transparent);margin:1.25rem 0;padding:.25rem 0 .25rem 1rem;opacity:.9}
 .tibly-article hr{border:none;border-top:1px solid color-mix(in srgb,currentColor 15%,transparent);margin:2rem 0}
-.tibly-resource-list{list-style:none;padding:0;margin:2rem 0 0}
-.tibly-resource-list li{margin:0;padding:1.1rem 0;border-bottom:1px solid color-mix(in srgb,currentColor 12%,transparent)}
-.tibly-resource-list li:first-child{border-top:1px solid color-mix(in srgb,currentColor 12%,transparent)}
-.tibly-resource-list a{font-size:1.15rem;font-weight:600;text-decoration:none}
-.tibly-resource-list a:hover{text-decoration:underline}</style>
+.tibly-resource-list{list-style:none;padding:0;margin:2.25rem 0 0;display:flex;flex-direction:column;gap:.7rem}
+.tibly-resource-list li{margin:0;padding:0;border:none}
+.tibly-resource-list a{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1.05rem 1.25rem;border:1px solid color-mix(in srgb,currentColor 14%,transparent);border-radius:12px;font-size:1.08rem;font-weight:600;line-height:1.4;text-decoration:none;transition:border-color .15s ease,background-color .15s ease}
+.tibly-resource-list a:hover{border-color:color-mix(in srgb,currentColor 35%,transparent);background:color-mix(in srgb,currentColor 5%,transparent);text-decoration:none}
+.tibly-resource-list a::after{content:"→";flex:none;font-weight:400;opacity:.45;transition:transform .15s ease,opacity .15s ease}
+.tibly-resource-list a:hover::after{transform:translateX(3px);opacity:.85}
+.tibly-article .tibly-resource-intro{opacity:.75}</style>
 <article class="tibly-article">
 <h1>Resources</h1>
-<p>Guides, answers, and behind-the-scenes details from Copley General Contracting.</p>
+<p class="tibly-resource-intro">Guides, answers, and behind-the-scenes details from Copley General Contracting.</p>
 <ul class="tibly-resource-list">
-<li><a href="/commercial-apartment-maintenance-clearwater">Commercial &amp; Apartment Maintenance Services — Clearwater — Copley General Contracting</a></li>
-<li><a href="/general-contractor-orlando">Orlando General Contractor Hub — Copley General Contracting</a></li>
-<li><a href="/general-contractor-tampa">Tampa General Contractor Landing Page</a></li>
-<li><a href="/emergency-repair-st-petersburg">St. Petersburg Emergency Structural Repair Page</a></li>
-<li><a href="/emergency-repair-clearwater">Clearwater Emergency Repair &amp; Storm Remediation Page</a></li>
-<li><a href="/general-contractor-clearwater">Clearwater General Contractor Landing Page</a></li>
+<li><a href="/emergency-repair-dunedin">Emergency Structural Repair &amp; Storm Remediation Page — Dunedin, FL</a></li>
+<li><a href="/general-contractor-dunedin">Dunedin Residential General Contractor</a></li>
+<li><a href="/st-petersburg-remodeling-cost-guide">St. Petersburg Remodeling Cost &amp; Open-Book Pricing Guide</a></li>
+<li><a href="/commercial-apartment-maintenance-clearwater">Commercial &amp; Apartment Maintenance Services — Clearwater</a></li>
+<li><a href="/general-contractor-orlando">Orlando General Contractor Hub</a></li>
+<li><a href="/general-contractor-tampa">Tampa General Contractor</a></li>
+<li><a href="/emergency-repair-st-petersburg">St. Petersburg Emergency Structural Repair</a></li>
+<li><a href="/emergency-repair-clearwater">Clearwater Emergency Repair &amp; Storm Remediation</a></li>
+<li><a href="/general-contractor-clearwater">Clearwater General Contractor</a></li>
 </ul>
 </article>
 </section>
