@@ -68,8 +68,8 @@
       <a class="font-display text-3xl font-extrabold uppercase tracking-tight text-ink transition-colors duration-200 hover:text-brand-600" href="/about">About</a>
       <a class="font-display text-3xl font-extrabold uppercase tracking-tight text-ink transition-colors duration-200 hover:text-brand-600" href="/services">Services</a>
       <a class="font-display text-3xl font-extrabold uppercase tracking-tight text-ink transition-colors duration-200 hover:text-brand-600" href="/testimonials">Testimonials</a>
-      <a aria-current="page" class="font-display text-3xl font-extrabold uppercase tracking-tight text-ink transition-colors duration-200 hover:text-brand-600" href="/resources">Resources</a>
       <a class="font-display text-3xl font-extrabold uppercase tracking-tight text-ink transition-colors duration-200 hover:text-brand-600" href="/contact">Contact</a>
+      <a aria-current="page" class="font-display text-3xl font-extrabold uppercase tracking-tight text-ink transition-colors duration-200 hover:text-brand-600" href="/resources">Resources</a>
     </nav>
     <div class="border-t border-ink/10 px-6 py-8">
       <a class="block w-full rounded-md bg-brand-500 px-6 py-4 text-center font-display text-sm font-bold uppercase tracking-[0.18em] text-white transition-colors duration-200 hover:bg-brand-600" href="/contact">Schedule a free walkthrough</a>
@@ -80,41 +80,56 @@
 <!-- /block:header -->
 <!-- block:aeo-resources -->
 <section data-block="aeo-resources">
-<style>[data-block="aeo-article"] .tibly-article,[data-block="aeo-resources"] .tibly-article{max-width:46rem;margin:0 auto;padding:4.5rem 1.5rem;line-height:1.75;font-size:1.0625rem}
-.tibly-article h1{font-size:2.25rem;line-height:1.2;font-weight:700;margin:0 0 1.25rem}
-.tibly-article h2{font-size:1.5rem;line-height:1.3;font-weight:650;margin:2.5rem 0 .75rem}
-.tibly-article h3{font-size:1.2rem;font-weight:600;margin:1.75rem 0 .5rem}
-.tibly-article p{margin:0 0 1rem}
-.tibly-article ul,.tibly-article ol{margin:0 0 1rem;padding-left:1.5rem}
-.tibly-article li{margin:.35rem 0}
-.tibly-article table{width:100%;border-collapse:collapse;margin:1.25rem 0;font-size:.95em}
-.tibly-article th,.tibly-article td{border:1px solid color-mix(in srgb,currentColor 20%,transparent);padding:.55rem .75rem;text-align:left}
-.tibly-article th{font-weight:600}
-.tibly-article a{text-decoration:underline}
-.tibly-article blockquote{border-left:3px solid color-mix(in srgb,currentColor 25%,transparent);margin:1.25rem 0;padding:.25rem 0 .25rem 1rem;opacity:.9}
-.tibly-article hr{border:none;border-top:1px solid color-mix(in srgb,currentColor 15%,transparent);margin:2rem 0}
-.tibly-resource-list{list-style:none;padding:0;margin:2.25rem 0 0;display:flex;flex-direction:column;gap:.7rem}
+<style>[data-block="aeo-article"] .tibly-article,[data-block="aeo-resources"] .tibly-article{--tibly-accent:color-mix(in srgb,var(--color-brand-600,currentColor) 75%,currentColor);max-width:46rem;margin:0 auto;padding:4.5rem 1.5rem 5.5rem;line-height:1.75;font-size:1.0625rem}
+.tibly-article h1,.tibly-article h2,.tibly-article h3,.tibly-article h4{font-family:var(--font-display,inherit);text-wrap:balance;scroll-margin-top:6rem}
+.tibly-article h1{font-size:clamp(2.1rem,5.5vw,2.9rem);line-height:1.12;font-weight:700;letter-spacing:-.015em;margin:0 0 1.5rem}
+.tibly-article h1+p{font-size:1.18em;line-height:1.6;opacity:.82}
+.tibly-article h2{font-size:1.55rem;line-height:1.25;font-weight:650;margin:2.75rem 0 .85rem}
+.tibly-article h3{font-size:1.2rem;font-weight:600;margin:2rem 0 .5rem}
+.tibly-article p{margin:0 0 1.05rem}
+.tibly-article ul,.tibly-article ol{margin:0 0 1.05rem;padding-left:1.4rem}
+.tibly-article li{margin:.4rem 0}
+.tibly-article li::marker{color:var(--tibly-accent)}
+.tibly-article a{color:inherit;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;text-decoration-color:color-mix(in srgb,var(--tibly-accent) 55%,transparent);transition:text-decoration-color .15s ease}
+.tibly-article a:hover{text-decoration-color:var(--tibly-accent)}
+.tibly-article strong{font-weight:650}
+.tibly-article img{max-width:100%;height:auto;border-radius:var(--radius-md,8px);margin:1.5rem 0}
+.tibly-article table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:.95em;line-height:1.5}
+.tibly-article th{font-family:var(--font-display,inherit);font-weight:650;text-align:left;border-bottom:2px solid color-mix(in srgb,currentColor 40%,transparent);padding:.6rem .75rem}
+.tibly-article td{border-bottom:1px solid color-mix(in srgb,currentColor 14%,transparent);padding:.6rem .75rem;vertical-align:top;text-align:left}
+.tibly-article tbody tr:nth-child(even){background:color-mix(in srgb,currentColor 4%,transparent)}
+.tibly-article code{font-size:.9em;background:color-mix(in srgb,currentColor 8%,transparent);border-radius:var(--radius-sm,4px);padding:.15em .4em}
+.tibly-article pre{background:color-mix(in srgb,currentColor 6%,transparent);border-radius:var(--radius-md,8px);padding:1rem 1.25rem;overflow-x:auto;margin:0 0 1.25rem}
+.tibly-article pre code{background:none;padding:0}
+.tibly-article blockquote{border-left:3px solid var(--tibly-accent);margin:1.75rem 0;padding:.35rem 0 .35rem 1.25rem;font-family:var(--font-display,inherit);font-size:1.1em;font-style:italic;opacity:.92}
+.tibly-article blockquote p:last-child{margin-bottom:0}
+.tibly-article hr{border:none;border-top:1px solid color-mix(in srgb,currentColor 15%,transparent);margin:2.5rem 0}
+.tibly-resource-list{list-style:none;padding:0;margin:2.5rem 0 0;display:flex;flex-direction:column;gap:.85rem}
 .tibly-resource-list li{margin:0;padding:0;border:none}
-.tibly-resource-list a{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1.05rem 1.25rem;border:1px solid color-mix(in srgb,currentColor 14%,transparent);border-radius:12px;font-size:1.08rem;font-weight:600;line-height:1.4;text-decoration:none;transition:border-color .15s ease,background-color .15s ease}
-.tibly-resource-list a:hover{border-color:color-mix(in srgb,currentColor 35%,transparent);background:color-mix(in srgb,currentColor 5%,transparent);text-decoration:none}
-.tibly-resource-list a::after{content:"→";flex:none;font-weight:400;opacity:.45;transition:transform .15s ease,opacity .15s ease}
-.tibly-resource-list a:hover::after{transform:translateX(3px);opacity:.85}
+.tibly-resource-list a{display:flex;align-items:center;justify-content:space-between;gap:1.1rem;padding:1.15rem 1.35rem;border:1px solid color-mix(in srgb,currentColor 14%,transparent);border-radius:var(--radius-lg,12px);text-decoration:none;transition:border-color .18s ease,background-color .18s ease,transform .18s ease}
+.tibly-resource-list a:hover{border-color:color-mix(in srgb,var(--tibly-accent) 55%,transparent);background:color-mix(in srgb,currentColor 4%,transparent);transform:translateY(-1px);text-decoration:none}
+.tibly-resource-text{display:flex;flex-direction:column;gap:.25rem;min-width:0}
+.tibly-resource-title{font-family:var(--font-display,inherit);font-size:1.1rem;font-weight:650;line-height:1.35}
+.tibly-resource-desc{font-size:.92rem;line-height:1.55;opacity:.72;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.tibly-resource-arrow{flex:none;font-weight:400;opacity:.45;color:var(--tibly-accent);transition:transform .18s ease,opacity .18s ease}
+.tibly-resource-list a:hover .tibly-resource-arrow{transform:translateX(4px);opacity:1}
 .tibly-article .tibly-resource-intro{opacity:.75}</style>
 <article class="tibly-article">
 <h1>Resources</h1>
 <p class="tibly-resource-intro">Guides, answers, and behind-the-scenes details from Copley General Contracting.</p>
 <ul class="tibly-resource-list">
-<li><a href="/service-areas">Largo Emergency Repair &amp; Remediation Service</a></li>
-<li><a href="/largo-fl-general-contractor">Largo, FL General Contracting Landing Page — Ready to Publish</a></li>
-<li><a href="/emergency-repair-dunedin">Emergency Structural Repair &amp; Storm Remediation Page — Dunedin, FL</a></li>
-<li><a href="/general-contractor-dunedin">Dunedin Residential General Contractor</a></li>
-<li><a href="/st-petersburg-remodeling-cost-guide">St. Petersburg Remodeling Cost &amp; Open-Book Pricing Guide</a></li>
-<li><a href="/commercial-apartment-maintenance-clearwater">Commercial &amp; Apartment Maintenance Services — Clearwater</a></li>
-<li><a href="/general-contractor-orlando">Orlando General Contractor Hub</a></li>
-<li><a href="/general-contractor-tampa">Tampa General Contractor</a></li>
-<li><a href="/emergency-repair-st-petersburg">St. Petersburg Emergency Structural Repair</a></li>
-<li><a href="/emergency-repair-clearwater">Clearwater Emergency Repair &amp; Storm Remediation</a></li>
-<li><a href="/general-contractor-clearwater">Clearwater General Contractor</a></li>
+<li><a href="/resources-2"><span class="tibly-resource-text"><span class="tibly-resource-title">St. Petersburg Remodeling Cost Guide</span><span class="tibly-resource-desc">Open-book pricing for St. Petersburg home renovations, ADUs, and structural repairs from Copley General Contracting. Licensed, family-owned.</span></span><span class="tibly-resource-arrow" aria-hidden="true">→</span></a></li>
+<li><a href="/general-contractor-clearwater"><span class="tibly-resource-text"><span class="tibly-resource-title">General Contractor in Clearwater, FL</span><span class="tibly-resource-desc">Family-owned Clearwater general contractor. Licensed CBC1263276. 10+ years serving Pinellas County. Free walkthrough — call (727) 773-7093.</span></span><span class="tibly-resource-arrow" aria-hidden="true">→</span></a></li>
+<li><a href="/service-areas"><span class="tibly-resource-text"><span class="tibly-resource-title">Largo Emergency Repair &amp; Remediation Service</span><span class="tibly-resource-desc">Fast-response structural repair, storm damage &amp; mold remediation for Largo, FL. Licensed FL contractor CBC1263276, MRSR3628, MRSA3460. Call (727) 773-7093.</span></span><span class="tibly-resource-arrow" aria-hidden="true">→</span></a></li>
+<li><a href="/largo-fl-general-contractor"><span class="tibly-resource-text"><span class="tibly-resource-title">Largo, FL General Contracting Landing Page — Ready to Publish</span><span class="tibly-resource-desc">Family-owned general contractor serving Largo, FL. Custom builds, renovations, ADUs &amp; structural repairs. Free walkthrough: (727) 773-7093.</span></span><span class="tibly-resource-arrow" aria-hidden="true">→</span></a></li>
+<li><a href="/emergency-repair-dunedin"><span class="tibly-resource-text"><span class="tibly-resource-title">Emergency Structural Repair &amp; Storm Remediation Page — Dunedin, FL</span><span class="tibly-resource-desc">Storm or water damage in Dunedin? Copley General Contracting handles structural repair, mold assessment &amp; remediation under one license. Call now.</span></span><span class="tibly-resource-arrow" aria-hidden="true">→</span></a></li>
+<li><a href="/general-contractor-dunedin"><span class="tibly-resource-text"><span class="tibly-resource-title">Dunedin Residential General Contractor</span><span class="tibly-resource-desc">Family-owned, licensed general contractor serving Dunedin, FL. Structural repair, remodels &amp; mold remediation under one roof. Call (727) 773-7093.</span></span><span class="tibly-resource-arrow" aria-hidden="true">→</span></a></li>
+<li><a href="/st-petersburg-remodeling-cost-guide"><span class="tibly-resource-text"><span class="tibly-resource-title">St. Petersburg Remodeling Cost &amp; Open-Book Pricing Guide</span><span class="tibly-resource-desc">See real cost factors for home remodeling in St. Petersburg, FL from a family-owned, licensed contractor. Open-book pricing, no surprises.</span></span><span class="tibly-resource-arrow" aria-hidden="true">→</span></a></li>
+<li><a href="/commercial-apartment-maintenance-clearwater"><span class="tibly-resource-text"><span class="tibly-resource-title">Commercial &amp; Apartment Maintenance Services — Clearwater</span><span class="tibly-resource-desc">Licensed Clearwater general contractor for property managers. Structural repair, mold remediation, painting for apartments &amp; commercial buildings.</span></span><span class="tibly-resource-arrow" aria-hidden="true">→</span></a></li>
+<li><a href="/general-contractor-orlando"><span class="tibly-resource-text"><span class="tibly-resource-title">Orlando General Contractor Hub</span><span class="tibly-resource-desc">Licensed FL general contractor CBC1263276 serving Orlando: custom builds, renovations, structural repair &amp; mold remediation. Call (727) 773-7093.</span></span><span class="tibly-resource-arrow" aria-hidden="true">→</span></a></li>
+<li><a href="/general-contractor-tampa"><span class="tibly-resource-text"><span class="tibly-resource-title">Tampa General Contractor</span><span class="tibly-resource-desc">`Family-owned GC serving Tampa: custom builds, renovations, structural repair &amp; mold remediation. Licensed CBC1263276. Call (727) 773-7093.` (142 chars)</span></span><span class="tibly-resource-arrow" aria-hidden="true">→</span></a></li>
+<li><a href="/emergency-repair-st-petersburg"><span class="tibly-resource-text"><span class="tibly-resource-title">St. Petersburg Emergency Structural Repair</span><span class="tibly-resource-desc">Storm or water damage in St. Petersburg? Copley General Contracting handles structural repair and mold remediation under one licensed team. Call now. (155…</span></span><span class="tibly-resource-arrow" aria-hidden="true">→</span></a></li>
+<li><a href="/emergency-repair-clearwater"><span class="tibly-resource-text"><span class="tibly-resource-title">Clearwater Emergency Repair &amp; Storm Remediation</span><span class="tibly-resource-desc">Storm damage, structural failure, or mold in Clearwater? Copley General Contracting is licensed for repair and remediation. Call (727) 773-7093.</span></span><span class="tibly-resource-arrow" aria-hidden="true">→</span></a></li>
 </ul>
 </article>
 </section>
